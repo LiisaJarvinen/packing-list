@@ -1,28 +1,32 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 const AddItems = (props) => {
 
-    const [item, setItem] = useState({});
-    const baseurl = "https://packing-list-4a102-default-rtdb.firebaseio.com/Packing%20List"
-    
     return (
         <div>
             <h1>Add Items to Packing List</h1>
             <label>Add Item: </label>
             <br/>
-            <input />
+            <input 
+              type="text"
+              id="item"
+              name="item"
+            />
             <br/>
-            <button onClick={save}>Save</button>
+            <button onClick={addItem}>Add to Packing List</button>
         </div>
     )
 
-    function save() {
+    function addItem() {
+
+        const itemName = document.getElementById("item").value;
+
+        let item = {};
+        item[itemName] = {name: itemName}
+        alert ("Added " + document.getElementById("item").value + " to packing list")
     
-        const url = baseurl + ".json";
-        
-        fetch(url, {
+        fetch("https://packing-list-4a102-default-rtdb.firebaseio.com/Packing%20List.json", {
           method: "PATCH",
-          "Content-Type": "application/json",
           body: JSON.stringify(item)
         })
           .then(function(response) {
@@ -43,7 +47,5 @@ const AddItems = (props) => {
           });
       }
 }
-
-
 
 export default AddItems;
