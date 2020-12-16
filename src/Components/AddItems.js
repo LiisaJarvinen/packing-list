@@ -1,19 +1,20 @@
 import React from 'react';
+import TripDetails from './TripDetails';
 
-const AddItems = (props) => {
+const AddItems = () => {
 
     return (
-        <div>
-            <h1>Add Items to Packing List</h1>
-            <label>Add Item: </label>
-            <br/>
+        <div className="AddItems">
+            <p>Add Items to My Packing List</p>
+            <TripDetails destination="Lapland" month="December" year="2020"/>
             <input 
               type="text"
               id="item"
               name="item"
+              placeholder="Add item..."
             />
             <br/>
-            <button onClick={addItem}>Add to Packing List</button>
+            <button onClick={addItem}>Add Item to Packing List</button>
         </div>
     )
 

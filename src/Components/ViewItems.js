@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import CreatePackingList from './CreatePackingList'
+import TripDetails from './TripDetails';
 
-const ViewItems = (props) => {
+const ViewItems = () => {
 
     const [items, setItems] = useState([]);
 
@@ -31,8 +31,9 @@ const ViewItems = (props) => {
       })
 
     return (
-        <div>
-            <h1>My Packing List to {props.destination} on {props.month} {props.year}</h1>
+        <div className="ViewItems">
+            <p>My Packing List</p>
+            <TripDetails destination="Lapland" month="December" year="2020"/>
             <ul>
                 {showItems}
             </ul>

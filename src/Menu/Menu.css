@@ -1,0 +1,20 @@
+ul {
+    list-style-type: none;
+    margin: 50px;
+    padding: 0;
+}
+
+.menubar {
+    display: inline;
+    padding: 30px;
+    background-color: powderblue;
+}
+
+.menubar:hover {
+    background-color: steelblue;
+}
+
+.menulink {
+    text-decoration: none;
+}
+
