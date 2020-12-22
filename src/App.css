@@ -14,6 +14,8 @@ button {
   font-size: 20px;
   padding: 10px;
   margin: 30px;
+  border-style: hidden;
+  border-radius: 10px;
 }
 
 p {
@@ -31,6 +33,16 @@ p {
 }
 
 .ViewItems {
+  margin: 0 auto;
+  background-color: powderblue;
+  width: 35%;
+  padding: 20px;
+  box-sizing: border-box;
+  border-style: hidden;
+  border-radius: 15px;
+}
+
+.LandingPage {
   margin: 0 auto;
   background-color: powderblue;
   width: 35%;

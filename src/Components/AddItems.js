@@ -24,7 +24,7 @@ const AddItems = () => {
 
         let item = {};
         item[itemName] = {name: itemName}
-        alert ("Added " + document.getElementById("item").value + " to packing list")
+        alert ("Added " + document.getElementById("item").value + " to My Packing List")
     
         fetch("https://packing-list-4a102-default-rtdb.firebaseio.com/Packing%20List.json", {
           method: "PATCH",
